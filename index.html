@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Cloud Professional</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+    
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+    
+                // Store hash
+                var hash = this.hash;
+    
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+    
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.nav-link').on('click', function(event) {
+            event.preventDefault(); // Prevent default anchor click behavior
+            var target = $(this).attr('href'); // Get the target section ID
+            $('.section').hide(); // Hide all sections
+            $(target).fadeIn(); // Show the target section
+    
+            // Update the active nav-link
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#resume" class="nav-link">Resume</a></li>
+            <li><a href="#certificate" class="nav-link">Certificate</a></li>
+            <li><a href="#lab" class="nav-link">Lab</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Sections -->
+    <section id="home" class="section">
+        <h1>Cloud Professional bla bla bla</h1>
+        <p>bla bla line 1</p>
+        <p>bla bla bla line2</p>
+        <!-- Content -->
+    </section>
+    <section id="resume" class="section">
+        <h1>Resume</h1>
+        <!-- Content -->
+    </section>
+    <section id="certificate" class="section">
+        <h1>Certificate</h1>
+        <!-- Content -->
+    </section>
+    <section id="lab" class="section">
+        <h1>Lab</h1>
+        <!-- Content -->
+    </section>
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <!-- Content -->
+    </section>   
+
+    <footer>
+    </footer>
+</body>
+</html>
